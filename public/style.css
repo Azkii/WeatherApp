@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "monospace", sans-serif;
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/*Main content*/
+.NavBox {
+    background-color: black;
+    color: white;
+    height: 7vh;
+    text-align: center;
+}
+.App {
+    background-image: url(./Photos/backg1.jpg);
+    background-size: cover;
+    background-position: inherit;
+    height: 93vh;
+    color: whitesmoke;
+}
+.App.another {
+    background-image: url("./Photos/backG.jpg");
+}
+.footer {
+    height: 7.2vh;
+    text-align: center;
+    border-bottom: solid 0.2vw #3c1361;
+}
+/*END OF Main content*/
+/*Nav section */
+.NavBox div {
+    padding-top: 0.4vw;
+    font-size: 1.5vw;
+}
+/*END OF Nav section*/
+/*Search section*/
+.searchBox .searchBar {
+    font-size: 2vw;
+    bottom: 50%;
+    margin-left: 17.5vw;
+    position: absolute;
+    width: 30vw;
+    height: 3.5vw;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 0.5vw;
+    -webkit-box-shadow: 2px 1px 34px -7px rgba(0,0,0,0.53);
+    -moz-box-shadow: 2px 1px 34px -7px rgba(0,0,0,0.53);
+    box-shadow: 2px 1px 34px -7px rgba(0,0,0,0.53);
+    background-color: rgba(255, 255, 255, 0.692);
+    color: black;
+    opacity: 0.9;
+}
+.searchBox .searchBar:focus {
+    background-color: rgba(255, 255, 255, 0.877);
+    opacity: 1;
+}
+/*END OF Search section*/
+/*Actual content display area*/
+.contentArea {
+    position: relative;
+    top: 14vh;
+    width: 65vw;
+    height: 75vh;
+    margin-left: 17.5vw;
+    border-radius: 1vw;
+}
+.shadowBox {
+    border-radius: 1vw 0 1vw 0 ;
+    -webkit-box-shadow: 0px 13px 39px 9px rgba(26, 26, 26, 0.5);
+    -moz-box-shadow: 0px 13px 39px 9px rgba(26, 26, 26, 0.5);
+    box-shadow: 0px 13px 39px 9px rgba(26, 26, 26, 0.5);
+}
+    /*First half*/
+    .firstHalf {
+        height: 45vh;
+        border-radius: 1vw 0 0 0 ;
+        background: url(./Photos/abs1.jpg);
+        background-size: cover;
+        border: solid 0.05vw
+    }
+    .location {
+        padding-top: 8vh;
+        margin-left: 35vw;
+        text-align: center;
+        width: 35vw;
+        height: 10vh;
+        font-size: 2.2vw;
+    }
+    .span {
+        margin-top: 2vw;
+        margin-left: 49.5vw;
+        width: 6vw;
+        border-bottom: rgb(255, 255, 255) solid 0.3vw;
+        border-radius: 2vw;
+    }
+    .weatherBox{
+        position: absolute;
+        z-index: 100;
+        margin-top: 2.5vw;
+        margin-left: 8vw;
+    }
+    .tempName {
+        text-align: center;
+        font-size: 4.8vw;
+    }
+    .weather {
+        text-align: center;
+        font-size: 1.8vw;
+    }
+    .calanderePart {
+        position: relative;
+        font-size: 1.5vw;
+        margin-top: 7.5vw;
+        margin-right: 38.7vw;
+        text-align: center;
+    }
+    /*Second half*/
+    .secondHalf {
+        height: 30vh;
+    }
+    .informations {
+        margin-top: 2vh;
+        margin-right: 1vw;
+        float: left;
+        background-color: teal;
+        width: 19.5vw;
+        height: 28vh;
+        border-radius: 0 0 0 1vw;
+        border: solid 0.1vw
+    }
+    .Forecast {
+        margin-top: 2vh;
+        float: left;
+        background-color:whitesmoke;
+        width: 44.5vw;
+        height: 28vh;
+        border-radius: 0 0 1vw 0;
+        border: solid 0.1vw
+    }
+/* Actual content display area*/
+/*Footer section*/
+.footer p {
+    padding-top: 1.1vw;
+    font-size: 1.5vw;
+}
+/*END OF Footer section*/
