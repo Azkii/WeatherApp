@@ -43,15 +43,15 @@ function InfoWithContent() {
                         onKeyPress={search}
                     />
                 </div>
-                {(typeof weather.main != "undefined") ? (
+                    {(typeof weather.main != "undefined") ? (
                 <div className="shadowBox">
                     <div className="firstHalf">
                         <div>
                             <div className="weatherBox">
                                 <div className="tempName">
-                                    {Math.round(weather.main.temp)}°C
+                                    {Math.round(weather.main.temp)}°
                                 </div>
-                                <div className="weather">Cloudy</div>
+                                <div className="weather">{weather.weather[0].main}</div>
                             </div>
                         </div>
                         <div className="lacationSearch">
