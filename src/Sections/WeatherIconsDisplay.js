@@ -1,11 +1,10 @@
 import React from "react"
 
-class WeatherIconsDisplay extends React.Component {
-    render() {
+function WeatherIconsDisplay(props) {
         return(
             <div className="secondHalf">
                 <div className="informations">
-                    
+                    {props.content.rain}
                 </div>
                 <div className="Forecast">
 
@@ -13,6 +12,5 @@ class WeatherIconsDisplay extends React.Component {
             </div>
         )
     }
-}
 
 export default WeatherIconsDisplay 

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import FinallDate from './FinallDate'
-import WeatherIconsDisplay from './WeatherIconsDisplay';
+import SearchBox from './SearchBox'
+import WeatherIconsDisplay from './WeatherIconsDisplay'
+import LocationSearch from './LocationSearch'
+import WeatherBox from './WeatherBox'
 const api = {
     key: "fc0ae8858c2a4db39b61d147688df12d",
     base: "https://api.openweathermap.org/data/2.5/"
@@ -33,40 +35,18 @@ function InfoWithContent() {
         //////////
         return (
             <div>
-                <div className="searchBox">
-                    <input
-                        type="text"
-                        className="searchBar"
-                        placeholder="Looking for me"
-                        onChange={e => setQuery(e.target.value)}
-                        value={query}
-                        onKeyPress={search}
-                    />
-                </div>
-                    {(typeof weather.main != "undefined") ? (
-                <div className="shadowBox">
-                    <div className="firstHalf">
-                        <div>
-                            <div className="weatherBox">
-                                <div className="tempName">
-                                    {Math.round(weather.main.temp)}°
-                                </div>
-                                <div className="weather">{weather.weather[0].main}</div>
-                            </div>
+                <SearchBox content = {{ query : e => setQuery(e.target.value), value : query, search : search}} />
+
+                {(typeof weather.main != "undefined") ? (
+                    <div className="shadowBox">
+                        <div className="firstHalf">
+                            <WeatherBox content = {{ temp : Math.round(weather.main.temp), main : weather.weather[0].main }} />
+                            <LocationSearch content = {{ name : weather.name, countrySys : weather.sys.country, datePart : finallDay }} />
                         </div>
-                        <div className="lacationSearch">
-                            <h1 className="location"> {weather.name}, {weather.sys.country} </h1>
-                            <div className="span"></div>
-                            <div className="calanderePart">
-                                <div className="dayName"><h4>{finallDay}</h4></div>
-                                <FinallDate />
-                            </div>
-                        </div>
-                        
+                        <WeatherIconsDisplay content = {{ rain : weather.wind.deg }} />
                     </div>
-                    <WeatherIconsDisplay />
-                </div>
-            ) : ('')}
+                    
+                ) : ('')}
             </div>
         )
 }

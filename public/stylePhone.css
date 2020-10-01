@@ -17,7 +17,7 @@
         /*background-size: 150%;
         background-position: -22vw -42vh;*/
         background-size: cover;
-        background-position: -160vw 10vw;
+        background-position: -160vw 0vw;
         width: 92vw;
         height: 95vh;
     }
@@ -42,6 +42,7 @@
         text-align: center;
         margin-left: 6vw;
         font-size: 6vw;
+        text-shadow: 0.7vw 0.3vh rgba(0, 0, 0, 0.452);
     }
     .span {
         display: none;
@@ -55,6 +56,7 @@
         width: 20vw;
         height: 5vh;
         font-size: 5vw;
+        text-shadow: 0.5vw 0.5vh rgba(0, 0, 0, 0.452);
     }
     .tempName {
         font-size: 28vw;
@@ -68,6 +70,7 @@
         margin-left: 20.5vw;
         font-family: 'Roboto', sans-serif;
         letter-spacing: 0vw;
+        text-shadow: 1.5vw 1vh rgba(0, 0, 0, 0.452);
     }
     .firstHalf {
         width: 92vw;
@@ -82,6 +85,7 @@
         height: 6vw;
         margin-left: 17vw;
         margin-top: 63vh;
+        text-shadow: 0.5vw 0.5vh rgba(0, 0, 0, 0.452);
     }
     .dayName {
         display: none;

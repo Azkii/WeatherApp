@@ -112,10 +112,12 @@ html {
         margin-left: 8vw;
     }
     .tempName {
+        margin-left: 2.5vw;
         text-align: center;
         font-size: 4.8vw;
     }
     .weather {
+        margin-left: 1vw;
         text-align: center;
         font-size: 1.8vw;
     }
