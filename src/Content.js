@@ -5,11 +5,9 @@ class Content extends React.Component {
     render() {
         return (
             <div className="App">
-            <div>
               <div className="contentArea">
                 <InfoWithContent />
               </div>
-            </div>
           </div>
         )
     }

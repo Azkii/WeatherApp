@@ -12,17 +12,32 @@ class FinallDate extends React.Component {
           }
           let finallData = dataList(new Date())
 
+					//// Hide show Sec half function
+					let hidden = false;
+          function onClickChange() {
+            if(hidden === false) {
+							document.querySelector('.secondHalf').style = 'display: none'
+							document.querySelector('.date').style = 'color: red'
+							console.log("not hidden")
+							hidden = true
+						}
+						else {
+							document.querySelector('.secondHalf').style = 'display: block'
+							document.querySelector('.date').style = 'color: blue'
+							console.log("hidden")
+							hidden = false
+						}
+					}
+					//// End of Hide show Sec half function
         return (
-            <div>
                 <div className="date">
                     {finallData}
                     <br></br>
                     <div 
-                        className="bottomBar" 
+												className="bottomBar"
+												onClick={onClickChange}
                     />  
                 </div>
-
-            </div>
         )
     }
 }
