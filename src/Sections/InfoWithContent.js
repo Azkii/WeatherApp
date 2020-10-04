@@ -32,18 +32,33 @@ function InfoWithContent() {
                 })
             }
         }
-        //////////
         return (
             <div>
-                <SearchBox content = {{ query : e => setQuery(e.target.value), value : query, search : search}} />
+                <SearchBox content = {{
+                      	query : e => setQuery(e.target.value),
+                        value : query,
+                        search : search}}
+                    	/>
 
                 {(typeof weather.main != "undefined") ? (
                     <div className="shadowBox">
                         <div className="firstHalf">
-                            <WeatherBox content = {{ temp : Math.round(weather.main.temp), main : weather.weather[0].main }} />
-                            <LocationSearch content = {{ name : weather.name, countrySys : weather.sys.country, datePart : finallDay }} />
+                            <WeatherBox content = {{
+															temp : Math.round(weather.main.temp),
+															main : weather.weather[0].main }}
+														/>
+                            <LocationSearch content = {{
+															name : weather.name,
+															countrySys : weather.sys.country,
+															datePart : finallDay }}
+														/>
                         </div>
-                        <WeatherIconsDisplay content = {{ rain : weather.wind.deg }} />
+                        <WeatherIconsDisplay content = {{ 
+													rain : weather.wind.deg,
+													speed: weather.wind.speed,
+													tempMax: Math.round(weather.main.temp_max), 
+													tempMin: Math.round(weather.main.temp_min) }}
+												/>
                     </div>
                     
                 ) : ('')}

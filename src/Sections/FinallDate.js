@@ -11,8 +11,18 @@ class FinallDate extends React.Component {
             return `${date} ${month} ${year}`
           }
           let finallData = dataList(new Date())
+
         return (
-            <div className="date"> {finallData} </div>
+            <div>
+                <div className="date">
+                    {finallData}
+                    <br></br>
+                    <div 
+                        className="bottomBar" 
+                    />  
+                </div>
+
+            </div>
         )
     }
 }
