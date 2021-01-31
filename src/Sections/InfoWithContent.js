@@ -4,8 +4,8 @@ import WeatherIconsDisplay from './WeatherIconsDisplay'
 import LocationSearch from './LocationSearch'
 import WeatherBox from './WeatherBox'
 const api = {
-    key: "fc0ae8858c2a4db39b61d147688df12d",
-    base: "https://api.openweathermap.org/data/2.5/"
+    key: "yup no key",
+    base: "you no base"
   }
 
 function InfoWithContent() {
